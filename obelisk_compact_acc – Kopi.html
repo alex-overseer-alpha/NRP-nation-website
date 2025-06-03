@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Obelisk Compact - The New Britannia</title>
+<style>
+  /* Root & body */
+  :root {
+    --deep-black: #0b0b0b;
+    --crimson-red: #b22222;
+    --dark-red: #7b1a1a;
+    --white-smoke: #f5f5f5;
+    --gray-dark: #2e2e2e;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--deep-black);
+    color: var(--white-smoke);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  /* Header */
+  header {
+    background-color: var(--crimson-red);
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 4px solid var(--dark-red);
+  }
+
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  header p {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: var(--white-smoke);
+  }
+
+  /* Navigation */
+  nav {
+    background-color: var(--gray-dark);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    color: var(--white-smoke);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+  }
+
+  nav a:hover {
+    background-color: var(--crimson-red);
+    color: var(--white-smoke);
+  }
+
+  /* Sections */
+  section {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    background-color: var(--gray-dark);
+    border-left: 5px solid var(--crimson-red);
+    border-radius: 6px;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    border-bottom: 2px solid var(--crimson-red);
+    padding-bottom: 0.5rem;
+  }
+
+  section p, section ul {
+    font-size: 1.125rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  ul li {
+    margin-bottom: 0.7rem;
+  }
+
+  /* Council Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+
+  th, td {
+    border: 1px solid var(--crimson-red);
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--crimson-red);
+    color: var(--white-smoke);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Classified Section */
+  #classified-section {
+    display: none;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1a0000;
+    border-left: 5px solid #8b0000;
+    border-radius: 8px;
+    color: #ffdddd;
+  }
+
+  /* Password prompt */
+  #password-prompt {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  #password-prompt input[type="password"] {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+  }
+
+  #password-prompt button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    background-color: var(--crimson-red);
+    border: none;
+    border-radius: 4px;
+    color: var(--white-smoke);
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  #password-prompt button:hover {
+    background-color: var(--dark-red);
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: var(--gray-dark);
+    border-top: 4px solid var(--crimson-red);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Obelisk Compact</h1>
+  <p>"Let the ashes of Britannia birth the fire to come."</p>
+</header>
+
+<nav>
+  <a href="#history">History</a>
+  <a href="#council">Council & Command</a>
+  <a href="#mtf">Mobile Task Forces</a>
+  <a href="#classified" onclick="promptPassword(event)">Classified</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <section id="history">
+    <h2>History: The Reunification of Britain and Ireland</h2>
+    <p>From the embers of division and decades of distant rule, the Obelisk Compact rose, binding the ancient lands of Britain and Ireland beneath one Crown once more. This union is no mere political maneuver but a sacred reawakening of kinship and shared destiny. The fractured isles have found strength in their unity, their histories intertwined anew—rising like a phoenix from past fires to reclaim their rightful place in the world.</p>
+    <p>The Compact honors tradition while forging forward, embracing the legacy of our ancestors and preparing for the dawn of a new Empire. Together, these lands shall no longer stand divided, but as one indomitable power, weathering the storms of history and guiding the future with wisdom and might.</p>
+  </section>
+
+  <section id="council">
+    <h2>Council of Thirteen & Command Structure</h2>
+    <p>The Obelisk Compact is guided by the Council of Thirteen, each entrusted with a vital aspect of governance, war, and restoration. Their combined wisdom ensures no one hand alone holds the weight of the Empire’s rebirth.</p>
+
+    <!-- Council table here (example snippet) -->
+    <table>
+      <thead>
+        <tr>
+          <th>Codename</th>
+          <th>Role</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O-1 "The Overseer"</td>
+          <td>Supreme Commander</td>
+          <td>Final authority. Oversees all council functions and the Restoration Codex.</td>
+        </tr>
+        <tr>
+          <td>O-2 "Graven"</td>
+          <td>Director of SIGIL</td>
+          <td>Master of intelligence and espionage; blind the enemy with shadows.</td>
+        </tr>
+        <!-- Add all council members similarly -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="mtf">
+    <h2>Mobile Task Forces</h2>
+    <p>The Obelisk Compact deploys a cadre of specialized Mobile Task Forces to replace the old military order. These units are trained, equipped, and loyal to the Compact’s mission of restoration and dominance.</p>
+
+    <ul>
+      <li><strong>Alpha-1 "Grim Spear":</strong> Infantry spearhead, 1,500 troops. Rapid deployment and urban warfare specialists.</li>
+      <li><strong>Echo-12 "Silent Dagger":</strong> Espionage and sabotage, 900 operatives. Silent but lethal.</li>
+      <li><strong>Omega-7 "Nightwatch":</strong> Airborne reconnaissance and strikes, 800 operatives. Eyes in the sky, claws in the night.</li>
+      <li><strong>Delta-5 "Iron Fangs":</strong> Armored assault force, 1,200 troops. Heavy firepower, frontline shock troops.</li>
+      <li><strong>Overseer’s Guard:</strong> Elite protective force for O-1, 400 operatives. Unyielding and vigilant.</li>
+      <li><strong>O-5 "Ashveil" Special Task Force:</strong> Historical doctrine and unconventional warfare, 600 operatives. Masters of psychological and doctrinal operations.</li>
+      <!-- Add all MTF units as per prior data -->
+    </ul>
+  </section>
+
+  <section id="classified-section">
+    <h2>Classified Section: Contingency Plans & Overseer History</h2>
+    <p><em>Access strictly restricted. Unauthorized entry is punishable by order of the Obelisk Compact.</em></p>
+    
+    <h3>Contingency Plans</h3>
+    <p>The Compact has devised layered responses for potential threats, including the resurgence of BUF collaborators, foreign interference, and internal fracturing. These plans remain encrypted and will be activated only at the Overseer's command.</p>
+    
+    <h3>The Overseer’s Chronicle</h3>
+    <p>Behind the veil of history lies the path of the Overseer—once a shadow among shadows, now the Architect of restoration. From covert strategy sessions in the bowels of Greater London to the forging of the Council itself, the Overseer's journey is testament to resilience and vision. This narrative shall remain confined to these walls, shielded by the sacred password, until the time is ripe for revelation.</p>
+  </section>
+
+  <section id="password-prompt">
+    <label for="classified-password"><strong>Enter Password for Classified Access:</strong></label>
+    <input type="password" id="classified-password" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="password-message" style="color:#ff4444; margin-top:10px;"></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries and communication, reach out via Discord:</p>
+    <p><strong>Discord:</strong> <a href="https://discordapp.com/users/the_administrator1984" target="_blank" style="color: var(--crimson-red);">the_administrator1984</a></p>
+  </section>
+  
+</div>
+
+<footer>
+  <p>© 2025 Obelisk Compact. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function promptPassword(event) {
+    event.preventDefault();
+    document.getElementById('password-prompt').scrollIntoView({behavior: 'smooth'});
+  }
+
+  function checkPassword() {
+    const input = document.getElementById('classified-password').value;
+    const message = document.getElementById('password-message');
+    if (input === 'Alpha-23-prime') {
+      document.getElementById('classified-section').style.display = 'block';
+      message.textContent = '';
+      // Scroll to the classified section
+      document.getElementById('classified-section').scrollIntoView({behavior: 'smooth'});
+      // Hide password prompt after success
+      document.getElementById('password-prompt').style.display = 'none';
+    } else {
+      message.textContent = 'Incorrect password. Access denied.';
+    }
+  }
+</script>
+
+</body>
+</html>
